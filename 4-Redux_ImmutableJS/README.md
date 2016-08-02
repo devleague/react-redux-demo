@@ -17,5 +17,6 @@ Immutable.js provides many Persistent Immutable data structures including: List,
 * run `npm start`
 
 ### Resources
+- [Redux Slides](https://slides.com/joecarlson/redux)
 - [Redux Docs](http://redux.js.org/index.html)
 - [ImmutableJs Docs](https://facebook.github.io/immutable-js/)

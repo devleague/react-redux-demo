@@ -9,4 +9,5 @@ React can also render on the server using Node and power mobile apps using React
 * run `http-server`
 
 ### Resources
+- [React Slides](http://slides.com/joecarlson/reactjs)
 - [React Docs](https://facebook.github.io/react/)

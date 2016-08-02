@@ -14,8 +14,10 @@ Each section builds on the section before it.
 
 ### Resources
 - [React Docs](https://facebook.github.io/react/)
+- [React Slides](http://slides.com/joecarlson/reactjs)
 - [Webpack Docs](https://webpack.github.io/)
 - [React Router Docs](https://github.com/reactjs/react-router)
+- [Redux Slides](https://slides.com/joecarlson/redux)
 - [Redux Docs](http://redux.js.org/index.html)
 - [ImmutableJs Docs](https://facebook.github.io/immutable-js/)
 - [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html)
