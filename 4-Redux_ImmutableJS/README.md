@@ -1,16 +1,21 @@
-## Intro to React - React Router
+## Intro to Redux and ImmutableJs
 
-Almost every client side application has some routing. If you are using React.js in a browser, you will reach the point when you should pick a library.
+This section covers how to add Redux and ImmutableJs into your build so that you can have predicatable state containers to your application.
 
-Our chosen one is the react-router by the excellent rackt community. Rackt always ships quality resources for React.js lovers.
+### What is Redux?
+Redux is a predictable state container for JavaScript apps.
 
-To integrate react-router check out their documentation, but what's more important here: if you use Flux/Redux we recommend to keep your router's state in sync with your store/global state.
+It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
 
-Synchronized router states will help you to control router behaviors by Flux/Redux actions and read router states and parameters in your components.
+### What is ImmutableJS?
+Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.
 
-Redux users can simply do it with the redux-simple-router library.
+Immutable.js provides many Persistent Immutable data structures including: List, Stack, Map, OrderedMap, Set, OrderedSet and Record.
+
 
 ### Getting Started
 * run `npm start`
 
-https://zalmoxisus.github.io/redux-devtools-extension/examples/todomvc/
+### Resources
+- [Redux Docs](http://redux.js.org/index.html)
+- [ImmutableJs Docs](https://facebook.github.io/immutable-js/)

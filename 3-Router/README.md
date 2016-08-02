@@ -8,7 +8,8 @@ To integrate react-router check out their documentation, but what's more importa
 
 Synchronized router states will help you to control router behaviors by Flux/Redux actions and read router states and parameters in your components.
 
-Redux users can simply do it with the redux-simple-router library.
-
 ### Getting Started
 * run `npm start`
+
+### Resources
+- [React Router Docs](https://github.com/reactjs/react-router)

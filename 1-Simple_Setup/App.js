@@ -1,5 +1,6 @@
 'use strict'
 
+// Before adding the XHR request to reddit - use this placeholder data - once the basic application is built out - you can add the XHR request and comment this data out.
 var data = [
   {id:1, title:'Cats are great', author:"joejoebinks3"},
   {id:2, title:'Dogs are great', author:"rayraybinks3"},
@@ -13,6 +14,7 @@ class RedditPage extends React.Component {
     this.state = {
       redditData : [],
     }
+    // Since the callback function changes context - we need to bind the context of the React component so that we can update state once we receive the data from Reddit
     this.onRedditData = this.onRedditData.bind(this);
   };
 
