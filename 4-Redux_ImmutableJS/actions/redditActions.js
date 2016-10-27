@@ -1,16 +1,18 @@
 'use strict';
 
+export const SET_ITEMS = 'SET_ITEMS';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
+
 export const removeItem = (id) => {
-  console.log('id: ', id);
-  dispatch({
-    type: 'remove_item',
+  return {
+    type: REMOVE_ITEM,
     id: id,
-  })
+  }
 };
 
 export const setItems = (data) => {
-  dispatch({
-    type: 'set_items',
+  return {
+    type: SET_ITEMS,
     data: data
-  })
+  }
 };

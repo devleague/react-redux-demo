@@ -41,7 +41,6 @@ function posts(state = initialState, action) {
         lastUpdated: action.receivedAt
       })
     case 'REMOVE_ITEM':
-      console.log('<state></state> ', state);
       const newRedditItems = state.rootReducer.postsBySubreddit[action.subreddit].items.filter((item) => {
         return item.data.id !== action.id
       })

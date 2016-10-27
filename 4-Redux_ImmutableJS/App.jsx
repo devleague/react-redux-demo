@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { connect } from 'react-redux';
 import RedditPage from './components/reddit/RedditPage.jsx'
 import Footer from './components/footer/Footer.jsx';
 

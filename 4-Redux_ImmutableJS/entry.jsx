@@ -15,11 +15,11 @@ const store = createStore(reducer);
 const initialState = store.getState();
 
 ReactDOM.render((
-  <Provider store={store}>
-    <Router history={hashHistory}>
-      <Route path="/" component={App} />
-        <Route path="/about" component={About} />
-        <Route path='*' component={NoMatch} />
+  <Provider store={ store }>
+    <Router history={ hashHistory }>
+      <Route path="/" component={ App } />
+        <Route path="/about" component={ About } />
+        <Route path='*' component={ NoMatch } />
     </Router>
   </Provider>
   ), document.getElementById('root')

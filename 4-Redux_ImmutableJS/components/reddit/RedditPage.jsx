@@ -2,7 +2,8 @@
 
 import React,  { PropTypes } from 'react';
 import Immutable from 'immutable';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { setItems } from '../../actions/redditActions';
 import RedditList from './RedditList.jsx';
 
 class RedditPage extends React.Component {
@@ -12,8 +13,9 @@ class RedditPage extends React.Component {
   };
 
   onRedditData(data) {
+    const {dispatch} = this.props;
     const parsedRedditData = JSON.parse(data.currentTarget.response).data.children
-    this.props.setItems(parsedRedditData);
+    dispatch(setItems(parsedRedditData));
   };
 
   onRedditError(data) {
@@ -50,24 +52,12 @@ RedditPage.defaultProps = {
   redditData: [],
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
     redditData: state.redditItemReducer.toJS(),
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setItems: (data) => {
-      dispatch({
-        type: 'SET_ITEMS',
-        data: data
-      })
-    }
-  }
-};
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RedditPage);;
+  mapStateToProps
+)(RedditPage);

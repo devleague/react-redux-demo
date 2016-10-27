@@ -1,6 +1,10 @@
 'use strict';
 
 import Immutable from 'immutable';
+import {
+  SET_ITEMS,
+  REMOVE_ITEM,
+} from '../actions/redditActions';
 
 const initialState = Immutable.List();
 
