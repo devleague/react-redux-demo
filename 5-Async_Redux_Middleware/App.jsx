@@ -11,7 +11,9 @@ class App extends React.Component {
         <ul role="nav">
           <li><Link to="/about">About</Link></li>
         </ul>
-        <RedditPage />
+        <div>
+          { this.props.children }
+        </div>
         <Footer />
       </div>
     )

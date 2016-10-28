@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router';
+import {
+  Router,
+  Route,
+  hashHistory,
+  IndexRoute
+} from 'react-router';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import * as reducers from './reducers';
@@ -17,9 +22,11 @@ const initialState = store.getState();
 ReactDOM.render((
   <Provider store={ store }>
     <Router history={ hashHistory }>
-      <Route path="/" component={ App } />
+      <Route path="/" component={ App } >
+        <IndexRoute component={ RedditPage } />
         <Route path="/about" component={ About } />
         <Route path='*' component={ NoMatch } />
+      </Route>
     </Router>
   </Provider>
   ), document.getElementById('root')
