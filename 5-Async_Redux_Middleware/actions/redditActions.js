@@ -1,66 +1,41 @@
-'use strict';
+// 'use strict';
 
-export const removeItem = (id) => {
-  dispatch({
-    type: 'REMOVE_ITEM',
-    id: id,
-  })
-};
+// export const SET_ITEMS = 'SET_ITEMS';
+// export const REMOVE_ITEM = 'REMOVE_ITEM';
 
-export const selectSubreddit = (subreddit) => {
+// export const removeItem = (id) => {
+//   return {
+//     type: REMOVE_ITEM,
+//     id: id,
+//   }
+// };
+
+// export const setItems = (data) => {
+//   return {
+//     type: SET_ITEMS,
+//     data: data
+//   }
+// };
+
+import { CALL_API } from '../middleware/api';
+
+export const FETCH_POSTS_REQUEST = 'FETCH_POSTS_REQUEST';
+export const FETCH_POSTS_SUCCESS = 'FETCH_POSTS_SUCCESS';
+export const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE';
+
+export const fetchPosts = () => {
+  const data = {
+    method: 'GET',
+  };
   return {
-    type: "SELECT_SUBREDDIT",
-    subreddit
-  }
-}
-
-export const invalidateSubreddit = (subreddit) => {
-  return {
-    type: "INVALIDATE_SUBREDDIT",
-    subreddit
-  }
-}
-
-const requestPosts = (subreddit) => {
-  return {
-    type: "REQUEST_POSTS",
-    subreddit
-  }
-}
-
-const receivePosts = (subreddit, json) => {
-  return {
-    type: "RECEIVE_POSTS",
-    subreddit,
-    posts: json.data.children.map(child => child.data),
-    receivedAt: Date.now()
-  }
-}
-
-const fetchPosts = (subreddit) => {
-  return dispatch => {
-    dispatch(requestPosts(subreddit))
-    return fetch(`http://www.reddit.com/r/${subreddit}.json`)
-      .then(response => response.json())
-      .then(json => dispatch(receivePosts(subreddit, json)))
-  }
-}
-
-const shouldFetchPosts = (state, subreddit) => {
-  const posts = state.rootReducer.postsBySubreddit[subreddit]
-  if (!posts) {
-    return true
-  } else if (posts.isFetching) {
-    return false
-  } else {
-    return posts.didInvalidate
-  }
-}
-
-export const fetchPostsIfNeeded = (subreddit) => {
-  return (dispatch, getState) => {
-    if (shouldFetchPosts(getState(), subreddit)) {
-      return dispatch(fetchPosts(subreddit))
+    [CALL_API]: {
+      endpoint: 'showerthoughts.json',
+      types: [
+        FETCH_POSTS_REQUEST,
+        FETCH_POSTS_SUCCESS,
+        FETCH_POSTS_FAILURE
+      ],
+      data,
     }
   }
-}
+};

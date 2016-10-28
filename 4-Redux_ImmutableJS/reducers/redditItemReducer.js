@@ -1,12 +1,12 @@
 'use strict';
 
-import Immutable from 'immutable';
+import { List } from 'immutable';
 import {
   SET_ITEMS,
   REMOVE_ITEM,
 } from '../actions/redditActions';
 
-const initialState = Immutable.List();
+const initialState = List();
 
 const redditItemReducer = (state = initialState, action) => {
 
@@ -17,7 +17,7 @@ const redditItemReducer = (state = initialState, action) => {
       return state.delete(action.index);
 
     case 'SET_ITEMS':
-      return Immutable.fromJS(action.data);
+      return List(action.data);
 
     default:
       newState;

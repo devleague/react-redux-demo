@@ -1,24 +1,22 @@
-## [Advanced] Async Redux and Redux Middleware
+## Intro to Redux and ImmutableJs
 
-This section covers advanced Redux concepts - this section is optional and can be covered if there is time. It demonstrates how to build React-Redux applications properly using Async Redux state changes.
+This section covers how to add Redux and ImmutableJs into your build so that you can have predicatable state containers to your application.
 
-### Why Async Actions?
-When you call an asynchronous API, there are two crucial moments in time: the moment you start the call, and the moment when you receive an answer (or a timeout).
+### What is Redux?
+Redux is a predictable state container for JavaScript apps.
 
-Each of these two moments can usually require a change in the application state; to do that, you need to dispatch normal actions that will be processed by reducers synchronously. Usually, for any API request you’ll want to dispatch at least three different kinds of actions:
+It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
 
-- **An action informing the reducers that the request began.**
-  - The reducers may handle this action by toggling an isFetching flag in the state. This way the UI knows it’s time to show a spinner.
+### What is ImmutableJS?
+Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.
 
-- **An action informing the reducers that the request finished successfully.**
-  - The reducers may handle this action by merging the new data into the state they manage and resetting isFetching. The UI would hide the spinner, and display the fetched data.
+Immutable.js provides many Persistent Immutable data structures including: List, Stack, Map, OrderedMap, Set, OrderedSet and Record.
 
-- **An action informing the reducers that the request failed.**
-  - The reducers may handle this action by resetting isFetching. Additionally, some reducers may want to store the error message so the UI can display it.
 
 ### Getting Started
 * run `npm start`
 
 ### Resources
-- [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html)
-- [Reduc Middleware](http://redux.js.org/docs/advanced/Middleware.html)
+- [Redux Slides](https://slides.com/joecarlson/redux)
+- [Redux Docs](http://redux.js.org/index.html)
+- [ImmutableJs Docs](https://facebook.github.io/immutable-js/)

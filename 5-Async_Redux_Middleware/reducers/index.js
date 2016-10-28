@@ -1,1 +1,1 @@
-export { default as rootReducer } from './redditItemReducer';
+export { default as redditItemReducer } from './redditItemReducer';

@@ -8,11 +8,11 @@ class RedditList extends React.Component {
     var redditListNode = this.props.redditData.map(function(redditDataItem, index){
       return (
         <RedditItem
-          id={redditDataItem.id}
+          id={redditDataItem.data.id}
           index={index}
-          author={redditDataItem.author}
-          key={redditDataItem.id} >
-          {redditDataItem.title}
+          author={redditDataItem.data.author}
+          key={redditDataItem.data.id} >
+          {redditDataItem.data.title}
         </RedditItem>
       )
     })
