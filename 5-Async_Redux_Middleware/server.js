@@ -42,6 +42,7 @@ if (isDeveloping) {
     res.write(
       fs.readFileSync(path.resolve(__dirname, 'dist/index.html'))
     );
+    res.end();
   });
 }
 
