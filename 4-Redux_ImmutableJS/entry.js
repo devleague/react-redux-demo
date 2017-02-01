@@ -9,10 +9,10 @@ import {
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import * as reducers from './reducers';
-import About from './components/static/About.jsx';
-import RedditPage from './components/reddit/RedditPage.jsx';
-import NoMatch from './components/static/NoMatch.jsx';
-import App from './App.jsx';
+import About from './components/static/About';
+import RedditPage from './components/reddit/RedditPage';
+import NoMatch from './components/static/NoMatch';
+import App from './App';
 
 const reducer = combineReducers(reducers);
 const store = createStore(reducer);
