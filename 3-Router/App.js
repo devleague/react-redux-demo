@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router'
-import RedditPage from './reddit/RedditPage.jsx';
-import Footer from './footer/footer.jsx';
+import RedditPage from './reddit/RedditPage';
+import Footer from './static/Footer';
 
 class App extends React.Component {
   render() {

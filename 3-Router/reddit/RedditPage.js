@@ -1,5 +1,5 @@
 import React from 'react';
-import RedditList from './RedditList.jsx';
+import RedditList from './RedditList';
 
 class RedditPage extends React.Component {
   constructor() {
