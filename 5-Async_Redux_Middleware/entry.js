@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { 
+  Router, 
+  Route, 
+  hashHistory, 
+  IndexRoute, 
+} from 'react-router';
 import configureStore from './configureStore';
 import { Provider } from 'react-redux';
-import About from './components/static/About.jsx';
-import RedditPage from './components/reddit/RedditPage.jsx';
-import NoMatch from './components/static/NoMatch.jsx';
-import App from './App.jsx';
+import About from './components/static/About';
+import RedditPage from './components/reddit/RedditPage';
+import NoMatch from './components/static/NoMatch';
+import App from './App';
 
 const store = configureStore();
 

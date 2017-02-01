@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import RedditItem from './RedditItem.jsx';
+import RedditItem from './RedditItem';
 
 class RedditList extends React.Component {
   render() {
