@@ -1,0 +1,9 @@
+$orange: orange;
+
+.active {
+  color: $orange !important;
+};
+
+.active:hover {
+  color: darken( $orange, 20% ) !important;
+};
