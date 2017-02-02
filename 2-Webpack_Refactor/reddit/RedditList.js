@@ -4,7 +4,6 @@ import RedditItem from './RedditItem';
 class RedditList extends React.Component {
   render() {
     var redditListNode = this.props.redditData.map(function(redditDataItem){
-      console.log(redditDataItem.data);
       return (
         <RedditItem author={redditDataItem.data.author} key={redditDataItem.data.id} >
           {redditDataItem.data.title}

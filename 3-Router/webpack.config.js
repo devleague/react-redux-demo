@@ -38,7 +38,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              'react', 
+              'react',
               'es2015'
             ],
           },
@@ -52,7 +52,11 @@ module.exports = {
       use: 'url?limit=10000'
     }, {
       test: /(\.scss$|\.css$)/,
-      use: ["style-loader", "css-loader", "sass-loader"]
+      use: [
+        "style-loader",
+        "css-loader?modules&importLoaders=1" + "&localIdentName=[path][local]__[hash:base64:5]",
+        "sass-loader"
+      ]
     }],
   }
 };

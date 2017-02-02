@@ -1,5 +1,6 @@
 import React from 'react';
 import RedditList from './RedditList';
+import styles from './RedditPage.scss';
 
 class RedditPage extends React.Component {
   constructor() {
@@ -33,7 +34,7 @@ class RedditPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.page}>
         <h1>Reddit</h1>
         <RedditList redditData={this.state.redditData} />
       </div>
